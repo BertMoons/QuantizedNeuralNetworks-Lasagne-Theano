@@ -32,7 +32,6 @@ from theano.sandbox.rng_mrg import MRG_RandomStreams as RandomStreams
 
 from theano.scalar.basic import UnaryScalarOp, same_out_nocomplex
 from theano.tensor.elemwise import Elemwise
-from keras.preprocessing.image import ImageDataGenerator
 
 
 

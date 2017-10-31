@@ -57,12 +57,12 @@ parser.add_argument('-ds','--dataset',help='dataset name, can be CIFAR-10, SVHN 
 parser.add_argument('-nb','--bits',help='number of bits throughout full network, both for weights and activations', required=True,type=int)
 parser.add_argument('-q','--quantized',help='quantized (1) or floating point (0) flag', required=True,type=int)
 parser.add_argument('-ne','--num_epochs',help='number of epochs for training', required=True,type=int)
-parser.add_argument('-a','--num_filters_A',help='number of filters in block A', required=True,type=int)
-parser.add_argument('-A','--num_layers_A',help='number of layers in block A', required=True,type=int)
-parser.add_argument('-b','--num_filters_B',help='number of filters in block B', required=True,type=int)
-parser.add_argument('-B','--num_layers_B',help='number of layers in block B', required=True,type=int)
-parser.add_argument('-c','--num_filters_C',help='number of filters in block C', required=True,type=int)
-parser.add_argument('-C','--num_layers_C',help='number of layers in block C', required=True,type=int)
+parser.add_argument('-nfa','--num_filters_A',help='number of filters in block A', required=True,type=int)
+parser.add_argument('-nla','--num_layers_A',help='number of layers in block A', required=True,type=int)
+parser.add_argument('-nfb','--num_filters_B',help='number of filters in block B', required=True,type=int)
+parser.add_argument('-nlb','--num_layers_B',help='number of layers in block B', required=True,type=int)
+parser.add_argument('-nfc','--num_filters_C',help='number of filters in block C', required=True,type=int)
+parser.add_argument('-nlc','--num_layers_C',help='number of layers in block C', required=True,type=int)
 parser.add_argument('-ft','--finetune',help='Finetune flag, yes(1), no(0)', required=True,type=int)
 parser.add_argument('-nl','--nonlinearity',help='Can be hardtanh or relu', required=True)
 parser.add_argument('-sym','--symmetry',help='Symmetry flag, can be yes(1), no(0) \n If nl=relu, sym has to be zero', required=True,type=int)
@@ -72,10 +72,6 @@ args = parser.parse_args()
 
 dataset = args.dataset
 if dataset=='CIFAR-10':
-	classes=10
-	channels=3
-	patch_size=32
-elif dataset=='SVHN':
 	classes=10
 	channels=3
 	patch_size=32
