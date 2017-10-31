@@ -10,7 +10,7 @@ This code is based on a [lasagne/theano](https://github.com/MatthieuCourbariaux/
 Running this code requires:
 1. [Theano](http://deeplearning.net/software/theano/)
 2. [Lasagne](https://lasagne.readthedocs.io/en/latest/)
-3. [pylearn2](http://deeplearning.net/software/pylearn2/)
+3. [pylearn2](http://deeplearning.net/software/pylearn2/) + the correct PYLEARN2_DATA_PATH in your shell
 3. A GPU with recent versions of [CUDA and CUDNN](https://developer.nvidia.com/cudnn)
 4. Correct paths in the top of train_quantized.py
 
