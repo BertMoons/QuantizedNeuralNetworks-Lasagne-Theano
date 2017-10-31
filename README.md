@@ -38,9 +38,9 @@ The included networks have parametrized sizes and are split into three blocks (A
 
 * This is how to train a 4-bit full qnn on CIFAR-10:
 
-  python train_quantized.py -ds CIFAR-10 -nb 4 -q 1 -ne 100 -nla 1 -nf1 64 -nlb 1 -nfb 64 -nlc 1 -nfc 64 -ft 0 -nl relu -sym 0 -lr 0.001
+  python train_quantized.py -ds CIFAR-10 -nb 4 -q 1 -ne 100 -nla 1 -nfa 64 -nlb 1 -nfb 64 -nlc 1 -nfc 64 -ft 0 -nl relu -sym 0 -lr 0.001
   
 * This is how to train a BinaryNet on CIFAR-10:
 
-  python train_quantized.py -ds CIFAR-10 __-nb 0__ -q 1 -ne 100 -nla 1 -nf1 64 -nlb 1 -nfb 64 -nlc 1 -nfc 64 -ft 0 __-nl hardtanh -sym 1__ -lr 0.001
+  python train_quantized.py -ds CIFAR-10 __-nb 0__ -q 1 -ne 100 -nla 1 -nfa 64 -nlb 1 -nfb 64 -nlc 1 -nfc 64 -ft 0 __-nl hardtanh -sym 1__ -lr 0.001
  
