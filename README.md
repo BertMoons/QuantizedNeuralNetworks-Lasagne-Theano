@@ -1,4 +1,4 @@
-# Training Quantized Neural Networks in Lasagne / Theano
+# Training Quantized Neural Networks
 
 ## Introduction
 Train your own __Quantized Neural Networks (QNN)__ - networks trained with quantized weights and activations - in __Lasagne / Theano__.
