@@ -38,8 +38,8 @@ if 'PYLEARN2_DATA_PATH' not in os.environ:
     print ('/esat/leda1/users/bmoons/PYLEARN2')
 
 
-#if listing:
-#    os.environ["THEANO_FLAGS"] = "cuda.root=%s,device=gpu0,lib.cnmem=0.8,floatX=float32"%(listing[0])#
+if listing:
+    os.environ["THEANO_FLAGS"] = "cuda.root=%s,device=gpu0,lib.cnmem=0.5,floatX=float32"%(listing[0])#
 
 
 import lasagne
@@ -155,14 +155,14 @@ if __name__ == "__main__":
 
 
     if (quantized):
-        save_path = "./models/%s_%s_%s_quantized_"%(nonlinearity,str(symmetry),dataset)+str(nlA)+"_"+str(nfA)+"_"+str(nlB)+"_"+str(nfB)+"_"+str(nlC)+"_"+str(nfC)+"_"+str(nb_bits)+"bits.npz"
+        save_path = "./models/%s_%s_%s_quantized_"%(dataset,nonlinearity,str(symmetry))+str(nlA)+"_"+str(nfA)+"_"+str(nlB)+"_"+str(nfB)+"_"+str(nlC)+"_"+str(nfC)+"_"+str(nb_bits)+"bits.npz"
     else:
-        save_path = "./models/%s_%s_%s_float_"%(nonlinearity,str(symmetry),dataset)+str(nlA)+"_"+str(nfA)+"_"+str(nlB)+"_"+str(nfB)+"_"+str(nlC)+"_"+str(nfC)+".npz"
+        save_path = "./models/%s_%s_%s_float_"%(dataset,nonlinearity,str(symmetry))+str(nlA)+"_"+str(nfA)+"_"+str(nlB)+"_"+str(nfB)+"_"+str(nlC)+"_"+str(nfC)+".npz"
     print("save_path = "+str(save_path))
     if (quantized):
-        load_path = "./models/%s_%s_%s_quantized_"%(nonlinearity,str(symmetry),dataset)+str(nlA)+"_"+str(nfA)+"_"+str(nlB)+"_"+str(nfB)+"_"+str(nlC)+"_"+str(nfC)+"_"+str(nb_bits)+"bits.npz"
+        load_path = "./models/%s_%s_%s_quantized_"%(dataset,nonlinearity,str(symmetry))+str(nlA)+"_"+str(nfA)+"_"+str(nlB)+"_"+str(nfB)+"_"+str(nlC)+"_"+str(nfC)+"_"+str(nb_bits)+"bits.npz"
     else:
-        load_path = "./models/%s_%s_%s_float_"%(nonlinearity,str(symmetry),dataset)+str(nlA)+"_"+str(nfA)+"_"+str(nlB)+"_"+str(nfB)+"_"+str(nlC)+"_"+str(nfC)+".npz"
+        load_path = "./models/%s_%s_%s_float_"%(dataset,nonlinearity,str(symmetry))+str(nlA)+"_"+str(nfA)+"_"+str(nlB)+"_"+str(nfB)+"_"+str(nlC)+"_"+str(nfC)+".npz"
     print("load_path = "+str(load_path))
 
     shuffle_parts = 1
